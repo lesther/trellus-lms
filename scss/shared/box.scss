@@ -1,0 +1,55 @@
+/////////////////////////////
+//box
+.box {
+	padding: 20px;
+	@include corner(10px);
+	border: 1px solid transparent;
+}
+.box_pad-none {
+	padding: 0;
+}
+.box_xs {
+	padding: 5px;
+	@include corner(5px);
+}
+.box_xs-1 {
+	padding: 10px;
+	@include corner(5px);
+}
+.box_sm {
+	padding: 15px;
+	@include corner(10px);
+}
+.box_md {
+	padding: 20px;
+	@include corner(10px);
+}
+.box_rounded-none {
+	@include corner(0);
+}
+.box_shadow-sm {
+    @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+.box_shadow-lg {
+    @include shadow(0 0 3rem 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+//format color
+@each $colorClass, $value in $mixClass-palette {
+	.box_highlight-#{$colorClass} {
+		@extend .box;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		color: map-get($value, 'bg');
+	}
+	.box_outline-#{$colorClass} {
+		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.3);
+	}
+	.box_outline-vertical-#{$colorClass} {
+		border-top-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
+		border-bottom-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
+	}
+	.box_#{$colorClass} {
+		@extend .box;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+}

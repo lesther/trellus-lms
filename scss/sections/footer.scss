@@ -1,0 +1,28 @@
+/////////////////////////////
+//footer
+//footer app
+.footer_app {
+    padding: 15px 25px;
+	z-index: 1;
+	position: relative;
+	background-color: $light-color;
+	@include lg {
+		padding: 15px 40px;
+	}
+}
+.footer_app:before {
+	content: "";
+	@include position(absolute, null, 100%, 0, null, 100%, 40px);
+	@include bg-vertical-gradient($lighter-color--primary, 0, 0%, $lighter-color--primary, 1, 100%);
+}
+.footer_app-fixed {
+    position: sticky;
+    bottom: 0;
+}
+
+@each $colorClass, $value in $mixClass-palette {
+	.footer_#{$colorClass} {
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+}

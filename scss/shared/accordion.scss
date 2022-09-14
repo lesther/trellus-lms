@@ -1,0 +1,69 @@
+/////////////////////////////
+//collapse
+.collapse__header {
+    padding: 15px 0;
+    position: relative;
+    border-bottom: 1px solid $split-color;
+    @include transition(0.3s);
+    &:hover {
+        color: $success-color;
+    }
+}
+.collapse__header:before {
+    content: "";
+	@include position(absolute, null, 0, 0, 0, 0, 1px);
+    background-color: $success-color;
+    margin: auto;
+    z-index: 1;
+    @include transition(0.3s);
+}
+.collapse__header-icon {
+    @extend .collapse__header;
+    padding-right: 30px;
+    &:hover:after {
+        background-image: url('../images/chevron_bottom-success.svg')
+    }
+}
+.collapse__header-icon:after {
+    content: "";
+    @include transition(0.3s);
+	@include position(absolute, 15px, null, null, 0, 25px, 25px);
+    @include background(100%, center, no-repeat);
+    background-image: url('../images/chevron_bottom-gray.svg')
+}
+.collapse__header--rounded-xs {
+    @include corner(3px);
+}
+
+//content
+.collapse__content {
+    overflow: auto;
+    max-height: 0;
+    @include transition(0.3s);
+}
+.collapse__content-wrap {
+    padding: 10px 0;
+}
+
+//active
+.collapse__header--active ~ .collapse__content {
+    max-height: 15rem;
+}
+.collapse__header--active {
+    color: $success-color;
+}
+.collapse__header--active:before {
+    width: 100%;
+}
+.collapse__header--active:after {
+    @include transform(rotate(-180deg));
+    background-image: url('../images/chevron_bottom-success.svg')
+}
+
+//tab
+.tab__header {
+    overflow-x: auto;
+}
+.tab__content:not(.active) {
+    display: none;
+}

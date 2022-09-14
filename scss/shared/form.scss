@@ -1,0 +1,237 @@
+/////////////////////////////
+// form
+//text_field
+.text_field {
+	padding: 12px 20px;
+	width: 100%;
+	border: 1px solid transparent;
+	background-color: rgba($color: $dark-color, $alpha: 0.05);
+	@include background(25px, calc(100% - 5px) 50%, no-repeat);
+	@include corner(5px);
+	@include transition(0.3s);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    @include placeholder($dark-color, 0.4, 300);
+	&:active,
+	&:focus,
+	&:focus-visible{
+		outline: none !important;
+	}
+    &:focus:not(.disabled) {
+        @include placeholder($dark-color, 0.7, 300);
+        background-color: $light-color;
+        border-color: rgba($color: $primary-color, $alpha: 1);
+        @include shadow(0 0 0 0.25rem rgba($color: $primary-color, $alpha: 0.15))
+    }
+}
+.text_field-outline {
+	@extend .text_field;
+    border-color: $gray-border-color;
+}
+.text_field-block {
+    width: 100%;
+}
+.text_field-corner-none {
+    @include corner(0);
+}
+.text_field-oval {
+    @include corner(10rem);
+}
+//sizes
+.text_field-sm {
+	@extend .text_field;
+    padding: 5px 10px;
+    @extend .text_sm;
+}
+.text_field-md {
+	@extend .text_field;
+    padding: 15px 10px;
+    @extend .text_md;
+}
+.text_field-lg{
+	@extend .text_field;
+    padding: 15px 25px;
+    @extend .text_lg;
+}
+.text_field-xl{
+	@extend .text_field;
+    padding: 15px 25px;
+    @extend .text_xl;
+}
+//date
+.text_field[type="date"] {
+	&::-webkit-inner-spin-button {
+		opacity: 0;
+		cursor: pointer;
+	}
+	&::-webkit-calendar-picker-indicator {
+		cursor: pointer;
+		height: 20px;
+		width: 20px;
+		margin-top: -10px;
+		margin-bottom: -10px;
+		margin-right: -10px;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTE3IDEyaC01djVoNXYtNXpNMTYgMXYySDhWMUg2djJINWMtMS4xMSAwLTEuOTkuOS0xLjk5IDJMMyAxOWMwIDEuMS44OSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMlY1YzAtMS4xLS45LTItMi0yaC0xVjFoLTJ6bTMgMThINVY4aDE0djExeiIvPjwvc3ZnPg==");
+		background-color: rgba($color: $primary-color, $alpha: 0);
+		@include corner(100%);
+		@include transition(0.3s);
+		@include opacity(30);
+		z-index: 99;
+	}
+	&:focus {
+		&::-webkit-calendar-picker-indicator {
+			@include opacity(100);
+		}
+	}
+}
+//select
+.text_field-select{
+    @extend .text_field;
+	padding-right: 20px;
+	cursor: pointer;
+	&__arrow{
+		pointer-events: none;
+	}
+	&:focus:hover ~ .text_field-select__arrow{
+		@include transform(rotate(180deg));
+	}
+}
+
+//search
+.text_field-search {
+	padding-right: 35px;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iI2JkYmRiZCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNS41IDE0aC0uNzlsLS4yOC0uMjdDMTUuNDEgMTIuNTkgMTYgMTEuMTEgMTYgOS41IDE2IDUuOTEgMTMuMDkgMyA5LjUgM1MzIDUuOTEgMyA5LjUgNS45MSAxNiA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==');
+}
+.text_field-search {
+	&:active,
+	&:focus,
+	&:focus-visible {
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iIzU5YmIwMCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNS41IDE0aC0uNzlsLS4yOC0uMjdDMTUuNDEgMTIuNTkgMTYgMTEuMTEgMTYgOS41IDE2IDUuOTEgMTMuMDkgMyA5LjUgM1MzIDUuOTEgMyA5LjUgNS45MSAxNiA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==');
+	}
+}
+
+//filter
+.text_field-filter {
+	position: relative;
+}
+@include only-mobile {
+	*:focus ~ .text_field-filter__content {
+		max-height: 600px;
+	}
+	.text_field-filter__content {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 100%;
+		background-color: $light-color;
+		z-index: 99;
+		overflow: hidden;
+		max-height: 0;
+		@include transition(0.3s);
+	}
+	.text_field-filter__items {
+		padding: 20px;
+		@include corner(5px);
+		border: 1px solid rgba($color: $dark-color, $alpha: 0.1);
+	}
+}
+
+//icon wrap
+.text_field-wrap {
+	position: relative;
+	.text_field{
+		padding-right: 40px;
+	}
+	&__item{
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 10px;
+		margin: auto;
+		@include transition(0.3s);
+	}
+	&__circle{
+		@include corner(200%);
+	}
+	&__icon{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		width: 16px;
+		height: 16px;
+		color: $primary-color;
+		text-align: center;
+		line-height: 16px !important;
+		@include background(cover);
+		@extend .text_sm;
+	}
+}
+.text_field-wrap__circle {
+	&_active,
+	&:hover{
+		background-color: rgba($color: $primary-color, $alpha: 0.15);
+	}
+}
+
+// checkbox
+.checkbox {
+	@include transition(0.3s);
+	margin-right: 0.5em !important;
+	margin-top: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid $dark-color;
+	&:not([disabled]){
+		cursor: pointer;
+	}
+}
+
+/////////////////////////////
+// color
+//format
+@each $colorClass, $value in $mixClass-palette {
+	.text_field-#{$colorClass}[type="date"], 
+	.text_field-#{$colorClass} {
+		@extend .text_field;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		color: map-get($value, 'bg');
+		color: map-get($value, 'input-color');
+		&:focus:not(.disabled) {
+			background-color: $light-color;
+			border-color: map-get($value, 'bg');
+			@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15));
+			color: map-get($value, 'color');
+		}
+	}
+	.text_field-outline-#{$colorClass}[type="date"],
+	.text_field-outline-#{$colorClass} {
+		@extend .text_field-outline;
+		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.7);
+    	background-color: transparent;
+        color: map-get($value, 'bg');
+        color: map-get($value, 'input-color');
+        &:focus:not(.disabled) {
+			border-color: rgba($color: map-get($value, 'bg'), $alpha: 1);
+            background-color: $light-color;
+            @include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15))
+        }
+	}
+}
+@each $colorClass, $value in $colorClass-palette {
+	.checkbox-#{$colorClass} {
+		@extend .checkbox;
+		border-color: $value;
+		&:focus {
+			@include shadow(0 0 0 0.25rem rgba($color: $value, $alpha: 0.15));
+		}
+		&:checked {
+			background-color: $value;
+			border-color: $value;
+		}
+	}
+}

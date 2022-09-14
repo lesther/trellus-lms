@@ -1,0 +1,51 @@
+/////////////////////////////
+// layout
+// hours
+.hr_group {
+    border-top: 1px solid $split-color;
+    min-height: 70px;
+}
+
+//format
+@each $colorClass, $value in $colorClass-palette {
+	.hr_group-#{$colorClass} {
+        @extend .divider;
+		border-color: $value;
+	}
+}
+
+/////////////////////////////
+//panel
+.side-panel-active {
+    .side-panel {
+        @include transform(translateX(0));
+    }
+    .side-panel-toggle:before {
+        @include opacity(100);
+        visibility: visible;
+    }
+}
+
+/////////////////////////////
+/// button fixed
+.btn_fixed-bottom-right {
+    border: 1px solid $secondary-color;
+    @include shadow(0 0 30px 0 rgba($color: $secondary-color, $alpha: 0));
+    &:focus,
+    .active,
+    &:active,
+    &:hover {
+        border-color: transparent;
+        @include shadow(0 0 30px 0 rgba($color: $secondary-color, $alpha: 0.5));
+    }
+}
+
+//app
+.app_wrapper {
+    @extend .group;
+    @extend .group_spacing-none;
+    min-height: 100vh;
+    //temporarily
+    max-width: 400px;
+    margin: 0 auto;
+}
