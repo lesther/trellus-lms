@@ -49,3 +49,26 @@
     max-width: 400px;
     margin: 0 auto;
 }
+
+// wrap body
+.section_body {
+    @include md {
+        margin: auto;
+        width: calc(100% - 80px);
+    }
+}
+
+// button fixe
+.btn_fixed-bottom-right.data-badge,
+.btn_fixed-bottom-right[data-badge]:after {
+	left: calc(100% - 20px);
+}
+
+// swiper
+.swiper-scrollbar-drag {
+    background-color: $primary-color;
+}
+.swiper-horizontal>.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    background-color: rgba($color: $primary-color, $alpha: 0.3);
+}

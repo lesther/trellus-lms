@@ -1,9 +1,13 @@
 /////////////////////////////
 // images
-.full-image{
+.full-image {
 	@include background(cover, center, no-repeat);
 }
-.full-image_overlay{
+.full-image_backward {
+	@include background(cover, center, no-repeat);
+	@include position(absolute, 0, null, 0, null, 100%, 100%);
+}
+.full-image_overlay {
 	position: relative;
 	@include background(0px, 0 200%);
 	&:before{
@@ -18,16 +22,16 @@
 		z-index: 2;
 	}
 }
-.full-image_overlay-thin:before{
+.full-image_overlay-thin:before {
 	@include opacity(10)
 }
-.full-image_overlay-light:before{
+.full-image_overlay-light:before {
 	@include opacity(20)
 }
-.full-image_overlay-medium:before{
+.full-image_overlay-medium:before {
 	@include opacity(50)
 }
-.full-image_overlay-hard:before{
+.full-image_overlay-hard:before {
 	@include opacity(70)
 }
 

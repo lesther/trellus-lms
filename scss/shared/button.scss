@@ -85,6 +85,12 @@
 		color: $light-color;
 	}
 }
+.btn_circle-md {
+	@extend .btn_circle;
+	width: 40px;
+	height: 40px;
+	@extend .text_default;
+}
 .btn_circle-sm {
 	@extend .btn_circle;
 	width: 30px;

@@ -60,6 +60,7 @@ $mixClass-palette: (
 	"light-2": ( bg: $light-color, input-color: inherit, color: inherit ),
 	"lighter": ( bg: $lighter-color, color: inherit ),
 	"lighter-2": ( bg: $lighter-color, input-color: inherit, color: inherit ),
+	"lighter-primary": ( bg: $lighter-color--primary, color: inherit ),
 	"dark": ( bg: $dark-color, color: $light-color ),
 	"gray": ( bg: $gray-color, color: inherit ),
 	"leading": ( bg: $leading-color, color: $light-color ),

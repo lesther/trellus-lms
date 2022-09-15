@@ -124,6 +124,32 @@
 	.group_spacing-xl#{$size} {
 		gap: 50px;
 	}
+
+    //flex grid     
+    .flex_grid-half#{$size} {
+      flex: auto 1 1;
+      max-width: 50%;
+    }
+    .flex_grid-half_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(50% - 15px);
+    }
+    .flex_grid-third#{$size} {
+      flex: auto 1 1;
+      max-width: 33.33%;
+    }
+    .flex_grid-third_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(33.33% - 15px);
+    }
+    .flex_grid-quarter#{$size} {
+      flex: auto 1 1;
+      max-width: 25%;
+    }
+    .flex_grid-quarter_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(25% - 15px);
+    }
 }
 
 // Generate font size helpers

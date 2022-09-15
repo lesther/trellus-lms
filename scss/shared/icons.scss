@@ -3,17 +3,21 @@
 // icon images
 .icon-group-container {
 	position: relative;
+	display: block;
+	overflow: hidden;
 }
 .icon-group__item {
 	display: block;
 	@include transition(0.3s);
+	transform-origin: center;
 }
 .icon-group__item-display {
 	display: block;
 	@include transition(0.3s);
 	@include opacity(0);
-	@include position(absolute, 0, null, 0 , 100%, 100%);
+	@include position(absolute, 0, null, 0, null, 100%, 100%);
 	@include transform(scale(0));
+	transform-origin: center;
 	z-index: 1;
 }
 .icon-group-hover *:focus ~ * .icon-group__item-display,
@@ -62,6 +66,10 @@
 }
 .icon_sm {
 	@extend .text_md;
+    line-height: 1;
+}
+.icon_md {
+	@extend .text_xl;
     line-height: 1;
 }
 .icon_lg {

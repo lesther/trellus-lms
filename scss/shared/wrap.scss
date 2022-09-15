@@ -1,57 +1,59 @@
 /////////////////////////////
 //wrapper
-.container {
+.wrap-container {
+  width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+  padding: 0;
 	@include md {
 		max-width: $max-width-container-page;
 	}
 }
 
-.container__shadow{
+.wrap-container__shadow{
   @include shadow(0 0 10px 0 $gray-border-color);
 }
 
 /////////////////////////////
 //container-size
 @mixin container-atr($size: "") {
-  .container_align-left#{$size} {
+  .wrap-container_align-left#{$size} {
     margin-right: auto;
     margin-left: 0;
   }
 
-  .container_align-right#{$size} {
+  .wrap-container_align-right#{$size} {
     margin-right: auto;
     margin-left: 0;
   }
 
-  .container_align-center#{$size} {
+  .wrap-container_align-center#{$size} {
     margin-right: auto;
     margin-left: auto;
   }
 
   //size
-  .container_xs#{$size} {
+  .wrap-container_xs#{$size} {
     max-width: 250px;
   }
 
-  .container_sm#{$size} {
+  .wrap-container_sm#{$size} {
     max-width: 360px;
   }
 
-  .container_md#{$size} {
+  .wrap-container_md#{$size} {
     max-width: 420px;
   }
 
-  .container_wide#{$size} {
+  .wrap-container_wide#{$size} {
     max-width: 500px;
   }
 
-  .container_lg#{$size} {
+  .wrap-container_lg#{$size} {
     max-width: 640px;
   }
 
-  .container_xl#{$size} {
+  .wrap-container_xl#{$size} {
     max-width: 1000px;
   }
 }

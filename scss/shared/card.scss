@@ -32,6 +32,22 @@
         padding: 20px 40px;
     }
 }
+.tile__header-image {
+    position: relative;
+    @include background(cover, center, no-repeat);
+}
+.tile__header-corner-sm {
+    @include corner(10px);
+}
+.tile__header-corner-md {
+    @include corner(20px);
+}
+.tile__header-xs {
+    padding: 10px;
+}
+.tile__header-xs-1 {
+    padding: 20px;
+}
 .tile__headline {
     margin: 4px;
     padding: 10px;

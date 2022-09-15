@@ -53,3 +53,12 @@
 		color: map-get($value, 'color');
 	}
 }
+
+// breakpoints
+.box--web {
+	@include only-mobile {
+		padding: 0px;
+		border-color: transparent;
+		background: transparent;
+	}
+}

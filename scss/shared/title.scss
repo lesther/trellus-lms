@@ -135,8 +135,8 @@
 }
 //themes
 .title_letter_profile {
-	width: 35px;
-	height: 35px;
+	width: 37px;
+	height: 37px;
 	@include corner(100%);
 	text-align: center;
 	font-weight: bold;
@@ -147,8 +147,9 @@
 	border: 0px solid transparent;
 	@include background(cover, center, no-repeat);
 	&::first-letter {
-		@extend .title_xs;
-		line-height: 35px;
+		font-size: 1rem;
+		line-height: 37px;
+		font-weight: bold;
 	}
 }
 .title_letter_profile-sm {
@@ -156,8 +157,6 @@
 	width: 25px;
 	height: 25px;
 	&::first-letter {
-		@extend .title_xs;
-		font-weight: bold;
 		line-height: 30px;
 	}
 }
@@ -166,8 +165,7 @@
 	width: 50px;
 	height: 50px;
 	&::first-letter {
-		@extend .title_sm;
-		font-weight: bold;
+		font-size: 1.5rem;
 		line-height: 50px;
 	}
 }
@@ -176,9 +174,28 @@
 	width: 60px;
 	height: 60px;
 	&::first-letter {
-		@extend .title_md;
-		font-weight: bold;
+		font-size: 2rem;
 		line-height: 60px;
+	}
+}
+
+// fluid
+.title_letter_profile-fluid-lg {
+	@include sm {
+		width: 50px;
+		height: 50px;
+		&::first-letter {
+			font-size: 1.5rem;
+			line-height: 50px;
+		}
+	}
+	@include md {
+		width: 60px;
+		height: 60px;
+		&::first-letter {
+			font-size: 2rem;
+			line-height: 60px;
+		}
 	}
 }
 

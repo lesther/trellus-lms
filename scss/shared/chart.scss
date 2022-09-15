@@ -1,18 +1,18 @@
 //chart pie
 .chart_pie {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 110px;
 }
 .chart_pie-md {
     position: relative;
-    height: 150px;
-    width: 150px;
+    height: 160px;
+    width: 160px;
 }
 .chart_pie-lg {
     position: relative;
-    height: 200px;
-    width: 200px;
+    height: 210px;
+    width: 210px;
 }
 .chart_pie__label {
     @include position(absolute, 0, 0, 0, 0,  100%,  100%);
@@ -43,6 +43,9 @@
     stroke-width: 2;
     stroke-miterlimit: 10;
     @include transition(0.3s);
+    @include transform(scale(0.9));
+    transform-origin: center;
+    stroke-linecap: round;
 }
 .chart_pie__svg-fill {
     fill: none;
@@ -51,6 +54,9 @@
     stroke-miterlimit: 10;
     stroke: rgba($color: $lighter-color, $alpha: 1);
     @include transition(0.3s);
+    @include transform(scale(0.9));
+    transform-origin: center;
+    stroke-linecap: round;
 }
 //thin
 .chart_pie__svg--thin .chart_pie__svg-data
