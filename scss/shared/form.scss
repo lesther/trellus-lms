@@ -6,7 +6,7 @@
 	width: 100%;
 	border: 1px solid transparent;
 	background-color: rgba($color: $dark-color, $alpha: 0.05);
-	@include background(25px, calc(100% - 5px) 50%, no-repeat);
+	@include background(25px, calc(100% - 15px) 50%, no-repeat);
 	@include corner(5px);
 	@include transition(0.3s);
 	-webkit-appearance: none;
@@ -99,7 +99,7 @@
 
 //search
 .text_field-search {
-	padding-right: 35px;
+	padding-right: 50px;
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iI2JkYmRiZCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNS41IDE0aC0uNzlsLS4yOC0uMjdDMTUuNDEgMTIuNTkgMTYgMTEuMTEgMTYgOS41IDE2IDUuOTEgMTMuMDkgMyA5LjUgM1MzIDUuOTEgMyA5LjUgNS45MSAxNiA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==');
 }
 .text_field-search {
@@ -234,4 +234,8 @@
 			border-color: $value;
 		}
 	}
+}
+
+.text_field-light {
+	background-color: $light-color;
 }

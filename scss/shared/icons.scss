@@ -98,6 +98,11 @@
 	animation: pulse 1.5s infinite ease-in;
 }
 
+// close
+.close_icon {
+	@include position(absolute, 10px, null, null, 10px, null, null);
+}
+
 @keyframes pulse {
 	from {
 		@include transform(scale(0.5));

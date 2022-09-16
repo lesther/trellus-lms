@@ -10,6 +10,13 @@
 	}
 }
 
+.wrap-container-sm {
+  @extend .wrap-container;
+  @include md {
+		max-width: calc(#{$max-width-container-page} - 200px);
+  }
+}
+
 .wrap-container__shadow{
   @include shadow(0 0 10px 0 $gray-border-color);
 }

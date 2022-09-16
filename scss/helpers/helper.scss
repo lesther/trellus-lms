@@ -448,14 +448,17 @@
 	.h-min-height-xxs#{$size} {
 		min-height: 100px;
 	}
-	.h-min-height-xs#{$size} {
-		min-height: 200px;
+	.h-min-height-xxs-1#{$size} {
+		min-height: 130px;
 	}
 	.h-min-height-sm#{$size} {
 		min-height: 200px;
 	}
 	.h-min-height-sm-1#{$size} {
 		min-height: 250px;
+	}
+	.h-min-height-sm-3#{$size} {
+		min-height: 350px;
 	}
 	.h-min-height-md#{$size} {
 		min-height: 400px;
@@ -542,7 +545,6 @@
 	}
 }
 
-
 // Generate
 @include h-display-atr();
 @include sm {
@@ -558,12 +560,31 @@
 	@include h-display-atr("--xl");
 }
 
+//display
+.h-display-block {
+	display: block;
+}
+.h-display-inline-block {
+	display: inline-block;
+}
+.h-display-inline {
+	display: inline;
+}
+.h-display-flex {
+	display: block;
+}
+
 // flex
 .h-flex-auto {
 	flex: 0 0 auto;
 }
 .h-align_self-center {
 	align-self: center;
+}
+
+// align
+.h-valign-middle {
+	vertical-align: middle;
 }
 
 // position
@@ -595,4 +616,10 @@
 }
 .h-z-3 {
 	z-index: -3;
+}
+
+
+// corner
+.h-corner-oval {
+	@include corner(10rem);
 }

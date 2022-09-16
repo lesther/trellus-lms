@@ -1,6 +1,7 @@
 /////////////////////////////
 //box
 .box {
+	position: relative;
 	padding: 20px;
 	@include corner(10px);
 	border: 1px solid transparent;
@@ -26,6 +27,9 @@
 }
 .box_rounded-none {
 	@include corner(0);
+}
+.box_rounded-md {
+	@include corner(20px);
 }
 .box_shadow-sm {
     @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));

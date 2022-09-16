@@ -72,3 +72,19 @@
 .swiper-scrollbar.swiper-scrollbar-horizontal {
     background-color: rgba($color: $primary-color, $alpha: 0.3);
 }
+
+// box
+.box_locked {
+    @include position(absolute, 0, null, 0 ,null, 100%, 100%);
+    z-index: 10;
+    background-color: rgba($color: $light-color, $alpha: 0.8);
+    &:after {
+        content: "lock";
+        @include material-icons;
+        @include position(absolute, null, 15px, null ,15px, null, null);
+        color: $leading-color;
+    }
+    & ~ .tile__body-xs {
+        pointer-events: none;
+    }
+}
