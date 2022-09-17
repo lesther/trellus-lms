@@ -88,3 +88,16 @@
         pointer-events: none;
     }
 }
+
+// sections
+// mobile
+.section_hide-header header {
+    @include only-mobile {
+        display: none;
+    }
+}
+.section_body {
+    @include only-mobile {
+        background-color: $light-color;
+    }
+}

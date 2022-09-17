@@ -136,6 +136,9 @@
 	}
 
 	// left
+	.h-spacing-left-auto#{$size} {
+		margin-left: auto;
+	}
 	.h-spacing-left-xs#{$size} {
 		margin-left: 5px;
 	}
@@ -156,6 +159,9 @@
 	}
 
 	// right
+	.h-spacing-right-auto#{$size} {
+		margin-right: auto;
+	}
 	.h-spacing-right-xs#{$size} {
 		margin-right: 5px;
 	}
@@ -528,6 +534,16 @@
 	}
 	.h-show-inline-flex#{$size} {
 		display: inline-flex;
+	}
+	.h-show-3-items#{$size} > * {
+		display: initial;
+		&:nth-of-type(n+1) { display: initial}
+		&:nth-of-type(1n+4) { display: none}
+	}
+	.h-show-4-items#{$size} > * {
+		display: initial;
+		&:nth-of-type(n+1) { display: initial}
+		&:nth-of-type(1n+5) { display: none}
 	}
 	.h-show-7-items#{$size} > * {
 		display: initial;

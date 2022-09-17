@@ -55,11 +55,6 @@
 }
 
 // icon fonts
-// material-icons
-.material-icons {
-	@extend .text_lg-1;
-    line-height: 1;
-}
 .icon_xs {
 	@extend .text_sm;
 	line-height: 1;

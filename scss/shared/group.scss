@@ -155,15 +155,15 @@
 // Generate font size helpers
 @include group-modifiers();
 @include sm {
-  @include group-modifiers("--sm");
+    @include group-modifiers("--sm");
 }
 
 @include md {
-  @include group-modifiers("--md");
+    @include group-modifiers("--md");
 }
 
 @include lg {
-  @include group-modifiers("--lg");
+    @include group-modifiers("--lg");
 }
 
 @include xl {

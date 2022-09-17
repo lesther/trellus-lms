@@ -1,4 +1,9 @@
 /////////////////////////////
+/// // material-icons
+.material-icons {
+	font-size: 20px;
+    line-height: 1;
+}
 //text
 .text{
 	margin-bottom: 15px;
@@ -220,6 +225,7 @@
 	text-align: center;
 	font-weight: bold;
 }
+// color
 .data-badge--warning-outline[data-badge]:after,
 .data-badge--warning-outline {
 	border-color: $leading-color;
@@ -229,10 +235,17 @@
 		color:  $light-color;
 	}
 }
+.data-badge--warning-highlight[data-badge]:after,
+.data-badge--warning-highlight {
+	color:  $leading-color;
+	background-color: rgba($color: $leading-color, $alpha: 0.1);
+}
 .data-badge--warning[data-badge]:after,
 .data-badge--warning {
 	background-color: $leading-color;
 }
+.data-badge--warning-highlight[data-badge]:hover:after,
+.data-badge--warning-highlight:hover,
 .data-badge--warning-outline[data-badge]:hover:after,
 .data-badge--warning-outline:hover,
 .data-badge--warning[data-badge]:hover:after,
@@ -241,6 +254,7 @@
 	background-color: $secondary-color;
 	border-color: $secondary-color;
 }
+// icon
 .data-badge.data-badge--icon,
 .data-badge--icon[data-badge]:after{
 	color: $leading-color;
