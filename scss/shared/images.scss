@@ -7,6 +7,9 @@
 	@include background(cover, center, no-repeat);
 	@include position(absolute, 0, null, 0, null, 100%, 100%);
 }
+.full-image_height-auto {
+	@include background(auto 100%, center, no-repeat);
+}
 .full-image_overlay {
 	position: relative;
 	@include background(0px, 0 200%);

@@ -107,8 +107,19 @@
 
 .section_hide-header .header_title {
     margin-top: -40px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    @include md {
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+.section_hide-header .header_title-sm {
+    @extend .header_title;
+    padding-bottom: 15px;
+    padding-top: 15px;
     @include md {
         margin-top: 0;
         padding-bottom: 0;
@@ -119,12 +130,24 @@
 .section_hide-header .divider_full-bottom {
     position: relative;
     min-height: 1px;
+    @include md {
+        display: none;
+    }
 }
+.section_hide-header .header_title:before,
+.section_hide-header .header_title-sm:before,
 .section_hide-header .divider_full-bottom:before {
     content: "";
     @include position(absolute, null, 0, -25px, null, calc(100% + 50px), 1px);
-    background-color: $split-color;
+    border-bottom: 1px solid $split-color;
     @include md {
         content: none;
+    }
+}
+
+.section_light-mobile {
+    @include only-mobile {
+        background-color: $light-color;
+        border-top: 1px solid $split-color;
     }
 }

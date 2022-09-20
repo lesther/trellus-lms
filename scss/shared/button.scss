@@ -184,6 +184,7 @@
 		&.active,
 		&:hover {
 			color: map-get($value, 'color');
+			color: map-get($value, 'color-hover');
 			background-color: map-get($value, 'hover');
 		}
 	}
@@ -230,6 +231,7 @@
 		&:hover {
 			background-color: map-get($value, 'bg');
 			color: map-get($value, 'color');
+			border-color: map-get($value, 'bg');
 		}
 	}
 	.btn_hover-color-#{$colorClass} {

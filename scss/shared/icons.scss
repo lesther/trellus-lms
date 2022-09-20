@@ -63,6 +63,10 @@
 	@extend .text_md;
     line-height: 1;
 }
+.icon_sm-1 {
+	@extend .text_lg;
+    line-height: 1;
+}
 .icon_md {
 	@extend .text_xl;
     line-height: 1;

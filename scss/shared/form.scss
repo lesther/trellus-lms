@@ -3,7 +3,6 @@
 //text_field
 .text_field {
 	padding: 12px 20px;
-	width: 100%;
 	border: 1px solid transparent;
 	background-color: rgba($color: $dark-color, $alpha: 0.05);
 	@include background(25px, calc(100% - 15px) 50%, no-repeat);
@@ -26,7 +25,7 @@
 }
 .text_field-outline {
 	@extend .text_field;
-    border-color: $gray-border-color;
+    border-color: inherit;
 }
 .text_field-block {
     width: 100%;
@@ -37,11 +36,19 @@
 .text_field-oval {
     @include corner(10rem);
 }
+.text_field-corner-sm {
+    @include corner(10px);
+}
 //sizes
 .text_field-sm {
 	@extend .text_field;
     padding: 5px 10px;
     @extend .text_sm;
+}
+.text_field-sm-1 {
+	@extend .text_field;
+    padding: 8px 10px;
+    @extend .text_md;
 }
 .text_field-md {
 	@extend .text_field;
@@ -199,27 +206,15 @@
 	.text_field-#{$colorClass} {
 		@extend .text_field;
 		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
-		color: map-get($value, 'bg');
-		color: map-get($value, 'input-color');
+		color: map-get($value, 'dark');
+		border-color: map-get($value, 'bg');
 		&:focus:not(.disabled) {
 			background-color: $light-color;
 			border-color: map-get($value, 'bg');
 			@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15));
-			color: map-get($value, 'color');
+			color: map-get($value, 'bg');
+			color: map-get($value, 'input-color');
 		}
-	}
-	.text_field-outline-#{$colorClass}[type="date"],
-	.text_field-outline-#{$colorClass} {
-		@extend .text_field-outline;
-		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.7);
-    	background-color: transparent;
-        color: map-get($value, 'bg');
-        color: map-get($value, 'input-color');
-        &:focus:not(.disabled) {
-			border-color: rgba($color: map-get($value, 'bg'), $alpha: 1);
-            background-color: $light-color;
-            @include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15))
-        }
 	}
 }
 @each $colorClass, $value in $colorClass-palette {
