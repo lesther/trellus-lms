@@ -1,5 +1,5 @@
 /////////////////////////////
-//collapse
+// collapse
 .collapse__header {
     padding: 15px 0;
     position: relative;
@@ -35,7 +35,7 @@
     @include corner(3px);
 }
 
-//content
+// content
 .collapse__content {
     overflow: auto;
     max-height: 0;
@@ -45,7 +45,7 @@
     padding: 10px 0;
 }
 
-//active
+// active
 .collapse__header--active ~ .collapse__content {
     max-height: 15rem;
 }
@@ -60,10 +60,47 @@
     background-image: url('../images/chevron_bottom-success.svg')
 }
 
-//tab
+// tab
 .tab__header {
     overflow-x: auto;
 }
 .tab__content:not(.active) {
     display: none;
+}
+
+// box
+.box_collapse {
+    @include transition(0.3s);
+    @include corner(10px);
+    border: 1px solid $leading-color;
+    overflow: hidden;
+}
+.box_collapse__header {
+    padding: 10px 15px;
+    background-color: rgba($color: $leading-color, $alpha: 0.05);
+    color: $leading-color;
+    @include transition(0.3s);
+    display: block;
+    text-align: center;
+    @extend .text_md;
+    font-weight: bold;
+}
+// content
+.box_collapse__content {
+    @extend .collapse__content;
+}
+.box_collapse__content-wrap {
+    padding: 20px;
+    background-color: rgba($color: $primary-color, $alpha: 0.1);
+}
+//active
+.box_collapse.active {
+    border-color: $primary-color;
+    .collapse__content {
+        max-height: 15rem;
+    }
+    .box_collapse__header {
+        background-color: $primary-color;
+        color: $light-color;
+    }
 }

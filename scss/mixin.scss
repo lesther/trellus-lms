@@ -347,3 +347,9 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 .panel__wrap-right {
 	@include side-section(right);
 }
+
+// width/height
+@mixin width-height($WH-width, $WH-height) {
+	width: $WH-width;
+	height: $WH-height;
+}

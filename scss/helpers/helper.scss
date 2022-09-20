@@ -696,3 +696,10 @@
 .h-corner-md {
     @include corner(20px);
 }
+
+// static width/height
+// themes
+// square
+.h-square-55 {
+	@include width-height(55px, 55px);
+}

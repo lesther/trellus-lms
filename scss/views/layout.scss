@@ -151,3 +151,34 @@
         border-top: 1px solid $split-color;
     }
 }
+
+// bg oval
+.bg_oval-secondary-soft {
+    position: relative;
+    z-index: 1;
+}
+.bg_oval-secondary-soft:before {
+    content: "";
+    background-color: $leading-color--light;
+    @include position(absolute, null, 22px, -10%, 0, 120%, 100% );
+    margin: auto;
+    display: block;
+    z-index: -1;
+}
+.bg_oval-secondary-soft:after {
+    content: "";
+    background: $leading-color--light;
+    background: -webkit-radial-gradient(top, $leading-color--light 70%, #fff 0%);
+    background: -moz-radial-gradient(top, $leading-color--light 70%, #fff 0%);
+    background: radial-gradient(to top, $leading-color--light 70%, #fff 0%);
+    //@include position(absolute, 50%, null, -25px, 0, calc(100% + 50px), 50% );
+    @include position(absolute, null, 22px, -10%, 0, 120%, 50% );
+    margin: auto;
+    display: block;
+    z-index: -1;
+}
+.h-overflow-hidden--md {
+    @include md {
+        overflow: hidden;
+    }
+}

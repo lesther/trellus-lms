@@ -28,6 +28,9 @@
 .box_rounded-none {
 	@include corner(0);
 }
+.box_rounded-sm {
+	@include corner(10px);
+}
 .box_rounded-md {
 	@include corner(20px);
 }
@@ -40,6 +43,10 @@
 .box_shadow-lg {
     @include shadow(0 0 3rem 0 rgba($color: $dark-color, $alpha: 0.15));
 }
+// outline 
+.box_outline-md {
+	border-width: 2px
+}
 //format color
 @each $colorClass, $value in $mixClass-palette {
 	.box_highlight-#{$colorClass} {
@@ -49,6 +56,9 @@
 	}
 	.box_outline-#{$colorClass} {
 		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.3);
+	}
+	.box_outline-solid-#{$colorClass} {
+		border-color: map-get($value, 'bg');
 	}
 	.box_outline-vertical-#{$colorClass} {
 		border-top-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
