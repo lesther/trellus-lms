@@ -25,6 +25,7 @@ $secondary-color: #f1be4e;
 $secondary-color--accent: #f9ca6c;
 $secondary-color--light: #f4d49d;
 $leading-color: #9e2358;
+$leading-color--light: #FBF2E1;
 //forms
 $disabled-color: #bdbdbd;
 $gray-border-color: #cccccc;
@@ -56,7 +57,7 @@ $colorClass-palette: (
 ) !default;
 
 $mixClass-palette: (
-	"light": ( bg: $light-color, color: inherit ),
+	"light": ( bg: $light-color, color: inherit, input-color: inherit, ),
 	"light-2": ( bg: $light-color, input-color: inherit, color: inherit ),
 	"lighter": ( bg: $lighter-color, color: inherit ),
 	"lighter-2": ( bg: $lighter-color, input-color: inherit, color: inherit ),
@@ -64,6 +65,7 @@ $mixClass-palette: (
 	"dark": ( bg: $dark-color, color: $light-color ),
 	"gray": ( bg: $gray-color, color: inherit ),
 	"leading": ( bg: $leading-color, color: $light-color ),
+	"leading-light": ( bg: $leading-color--light, color: inherit ),
 	"primary": ( bg: $primary-color, color: $light-color ),
 	"primary-accent": ( bg: $primary-color--accent, color: $light-color ),
 	"secondary": ( bg: $secondary-color, color: $light-color ),

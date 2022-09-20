@@ -72,6 +72,9 @@
 .btn_corner-none {
 	@include corner(0);
 }
+.btn_corner-md {
+	@include corner(10px);
+}
 .btn_circle {
 	padding: 0;
 	@extend .btn;

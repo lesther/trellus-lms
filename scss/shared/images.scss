@@ -35,6 +35,24 @@
 	@include opacity(70)
 }
 
+.box_image {
+	padding:10px;
+	@include background(35px 35px, center, no-repeat);
+	border: 1px solid rgba($color: $primary-color, $alpha: 0.5);
+	background-color: $light-color;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iIzYzQjQ5QiI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0yMSAxOVY1YzAtMS4xLS45LTItMi0ySDVjLTEuMSAwLTIgLjktMiAydjE0YzAgMS4xLjkgMiAyIDJoMTRjMS4xIDAgMi0uOSAyLTJ6TTguNSAxMy41bDIuNSAzLjAxTDE0LjUgMTJsNC41IDZINWwzLjUtNC41eiIvPjwvc3ZnPg==');
+}
+.box_image[style*="background-image"] {
+	@include background(cover, null, null);
+}
+.box_image-rounded {
+	@include corner(10px);
+}
+.box_image-square-sm {
+	min-width: 75px;
+	min-height: 75px;
+}
+
 // profile
 .profile {
 	@extend .full-image;

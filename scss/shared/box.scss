@@ -31,6 +31,9 @@
 .box_rounded-md {
 	@include corner(20px);
 }
+.box_rounded-oval {
+	@include corner(50px);
+}
 .box_shadow-sm {
     @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));
 }

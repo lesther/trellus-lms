@@ -96,8 +96,35 @@
         display: none;
     }
 }
-.section_body {
+.section_hide-header {
     @include only-mobile {
-        background-color: $light-color;
+        .section_body {
+            background-color: $light-color;
+        }
+    }
+}
+
+
+.section_hide-header .header_title {
+    margin-top: -40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    @include md {
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+.section_hide-header .divider_full-bottom {
+    position: relative;
+    min-height: 1px;
+}
+.section_hide-header .divider_full-bottom:before {
+    content: "";
+    @include position(absolute, null, 0, -25px, null, calc(100% + 50px), 1px);
+    background-color: $split-color;
+    @include md {
+        content: none;
     }
 }
