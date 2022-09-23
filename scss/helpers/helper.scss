@@ -696,6 +696,9 @@
 .h-corner-md {
     @include corner(20px);
 }
+.h-corner-lg {
+    @include corner(30px);
+}
 
 // static width/height
 // themes

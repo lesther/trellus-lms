@@ -253,8 +253,15 @@ input:checked + .checkbox-rate {
 }
 
 // btn dropdown
+.btn_dropdown-circle-horizontal,
 .btn_dropdown-circle {
 	position: relative;
+	input {
+		position: absolute;
+		z-index: -1;
+		visibility: hidden;
+		@include opacity(0);
+	}
 }
 .btn_dropdown-circle__menu {
 	@include position(absolute, null, 100%, 0, 0, null, null);
@@ -276,10 +283,15 @@ input:checked + .checkbox-rate {
 	text-align: center;
 	color: $disabled-color;
 	z-index: 1;
+	cursor: pointer;
 	&.active,
 	&:hover {
 		color: $light-color
 	}
+}
+.btn_dropdown-circle-horizontal input:checked + .btn_dropdown-circle__items,
+.btn_dropdown-circle input:checked + .btn_dropdown-circle__items {
+	color: $light-color
 }
 .btn_dropdown-circle__icon {
 	text-align: center;
@@ -294,6 +306,8 @@ input:checked + .checkbox-rate {
 	@include transition(0.3s);
 	z-index: -1;
 }
+.btn_dropdown-circle-horizontal input:checked + .btn_dropdown-circle__items:before,
+.btn_dropdown-circle input:checked + .btn_dropdown-circle__items:before,
 .btn_dropdown-circle__items.active:before,
 .btn_dropdown-circle__items:hover:before {
 	@include transform(scale(1));
