@@ -39,7 +39,7 @@
         @include shadow(0 0 30px 0 rgba($color: $secondary-color, $alpha: 0.5));
     }
     @include sm {
-        bottom: 140px
+        bottom: 70px;
     }
 }
 
