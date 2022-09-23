@@ -38,6 +38,11 @@
 		padding-bottom: 0;
 	}
 
+	.section_pad-xxs#{$size} {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
 	.section_pad-xs#{$size} {
 		padding-top: 40px;
 		padding-bottom: 40px;

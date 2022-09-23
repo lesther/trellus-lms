@@ -38,6 +38,7 @@
         border-color: transparent;
         @include shadow(0 0 30px 0 rgba($color: $secondary-color, $alpha: 0.5));
     }
+    bottom: 140px
 }
 
 //app
@@ -144,11 +145,23 @@
         content: none;
     }
 }
-
+.divider--footer {
+    display: none;
+}
+.section_hide-header {
+    @include only-mobile {
+        .footer_body .divider--footer {
+            display: block;
+        }
+    }
+}
 .section_light-mobile {
     @include only-mobile {
         background-color: $light-color;
         border-top: 1px solid $split-color;
+        ~ .footer_body .divider--footer {
+            display: block;
+        }
     }
 }
 

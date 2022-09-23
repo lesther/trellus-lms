@@ -167,6 +167,7 @@
     }
     .flex_width-auto#{$size} {
         flex: 0 0 auto;
+        width: auto;
     }
     .flex_fill#{$size} {
         flex: 1;
