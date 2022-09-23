@@ -197,6 +197,65 @@
 		cursor: pointer;
 	}
 }
+.checkbox-rate input:checked {
+	color: $light-color;
+}
+.checkbox-rate {
+	position: relative;
+	height: 35px;
+	width: 35px;
+	display: block;
+	color: $disabled-color;
+	border-right: 1px solid rgba($color: $primary-color, $alpha: 0.3);
+	@extend .text_md;
+	line-height: 35px;
+	text-align: center;
+	z-index: 1;
+	font-weight: bold;
+	@include transition(0.3s);
+	cursor: pointer;
+	&:last-child {
+		border: 0;
+	}
+	&:hover {
+		color: $primary-color;
+		background: rgba($color: $primary-color, $alpha: 0.2);
+	}
+}
+.checkbox-rate:after {
+	content: "";
+	background-color: $secondary-color;
+	@include position(absolute, 0, null, 0, null, 100%, 100%);
+	@include transform(scale(0));
+	@include transition(0.3s);
+	z-index: -1;
+	background-color: $primary-color;
+	@include corner(100%);
+}
+input:checked + .checkbox-rate {
+	color: $light-color;
+	border-color: transparent;
+	&:after {
+		@include transform(scale(1));
+		@include corner(0);
+	}
+}
+.checkbox-rate_group {
+	display: inline-flex;
+	flex-direction: row;
+    flex-wrap: nowrap;
+	background-color: $lighter-color--primary;
+	@include corner(10rem);
+	border: 2px solid $primary-color;
+	overflow: hidden;
+	input {
+		@include opacity(0);
+		visibility: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
 
 /////////////////////////////
 // color
