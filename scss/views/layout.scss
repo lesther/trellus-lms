@@ -76,7 +76,7 @@
     background-color: rgba($color: $primary-color, $alpha: 0.3);
 }
 // full height card
-.swiper-wrapper--full_height .swiper-slide {
+.swiper-wrapper .swiper-slide {
     height: auto;
     > *,
     .tile__body-xs,
