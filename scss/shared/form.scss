@@ -202,14 +202,20 @@
 	height: 35px;
 	width: 35px;
 	display: block;
-	color: $disabled-color;
+	color: $primary-color;
 	border-right: 1px solid rgba($color: $primary-color, $alpha: 0.3);
 	@extend .text_md;
+	font-weight: 600;;
 	line-height: 35px;
 	text-align: center;
 	z-index: 1;
 	@include transition(0.3s);
 	cursor: pointer;
+	@include sm {
+		height: 40px;
+		width: 45px;
+		line-height: 40px;
+	}
 	&:last-child {
 		border: 0;
 	}

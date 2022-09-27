@@ -94,13 +94,27 @@
     background-color: rgba($color: $primary-color, $alpha: 0.1);
 }
 //active
+.box_collapse:hover.visited,
+.box_collapse:hover,
+.box_collapse.active.visited,
 .box_collapse.active {
     border-color: $primary-color;
-    .collapse__content {
-        max-height: 15rem;
-    }
     .box_collapse__header {
         background-color: $primary-color;
         color: $light-color;
+    }
+}
+.box_collapse.active {
+    .collapse__content {
+        max-height: 15rem;
+    }
+}
+// visited
+.box_collapse:visited,
+.box_collapse.visited {
+    border-color: $primary-color;
+    .box_collapse__header {
+        background-color: $lighter-color;
+        color: $primary-color;
     }
 }

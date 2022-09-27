@@ -75,6 +75,25 @@
 .swiper-scrollbar.swiper-scrollbar-horizontal {
     background-color: rgba($color: $primary-color, $alpha: 0.3);
 }
+// full height card
+.swiper-wrapper--full_height .swiper-slide {
+    height: auto;
+    > *,
+    .tile__body-xs,
+    .tile__body {
+        height: 100%;
+    }
+    .tile__body > .group,
+    .tile__body-xs > .group {
+        height: 100%;
+    }
+    .tile__body-xs > .group > * {
+        flex-grow: 0;
+        &:last-child {
+            margin-top: auto;
+        }
+    }
+}
 
 // box
 .box_locked {
