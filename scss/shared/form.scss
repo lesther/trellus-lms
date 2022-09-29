@@ -231,7 +231,7 @@
 	@include transition(0.3s);
 	z-index: -1;
 	background-color: $primary-color;
-	@include corner(100%);
+	@include corner(15px);
 }
 input:checked + .checkbox-rate {
 	color: $light-color;
