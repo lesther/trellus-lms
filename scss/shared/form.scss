@@ -211,10 +211,6 @@
 	z-index: 1;
 	@include transition(0.3s);
 	cursor: pointer;
-	@include lg {
-		height: 45px;
-		line-height: 45px;
-	}
 	&:last-child {
 		border: 0;
 	}
