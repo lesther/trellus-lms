@@ -199,22 +199,21 @@
 }
 .checkbox-rate {
 	position: relative;
-	height: 35px;
-	width: 35px;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
 	display: block;
 	color: $primary-color;
 	border-right: 1px solid rgba($color: $primary-color, $alpha: 0.3);
-	@extend .text_md;
+	@extend .text_lg;
 	font-weight: 600;;
-	line-height: 35px;
 	text-align: center;
 	z-index: 1;
 	@include transition(0.3s);
 	cursor: pointer;
-	@include sm {
-		height: 40px;
-		width: 45px;
-		line-height: 40px;
+	@include lg {
+		height: 45px;
+		line-height: 45px;
 	}
 	&:last-child {
 		border: 0;
@@ -243,13 +242,17 @@ input:checked + .checkbox-rate {
 	}
 }
 .checkbox-rate_group {
-	display: inline-flex;
+	display: flex;
 	flex-direction: row;
     flex-wrap: nowrap;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: $lighter-color--primary;
 	@include corner(10rem);
 	border: 2px solid $primary-color;
 	overflow: hidden;
+	justify-content: space-between;
+	text-align: center;
 	input {
 		@include opacity(0);
 		visibility: hidden;
