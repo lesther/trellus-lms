@@ -10,6 +10,7 @@
 	display: block;
 	@include transition(0.3s);
 	transform-origin: center;
+	max-width: none;
 }
 .icon-group__item-display {
 	display: block;
@@ -72,6 +73,8 @@
     line-height: 1;
 }
 .icon_lg {
+	height: 30px;
+	width: 30px;
 	@extend .text_xxl;
     line-height: 1;
 }
