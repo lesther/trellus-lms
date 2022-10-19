@@ -339,11 +339,15 @@ input:checked + .checkbox-rate {
 		@extend .text_field;
 		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
 		color: map-get($value, 'dark');
-		border-color: map-get($value, 'bg');
 		&:focus:not(.disabled) {
 			background-color: $light-color;
 			border-color: map-get($value, 'bg');
 			@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15));
+		}
+	}
+	.text_field-color_#{$colorClass} {
+		color: map-get($value, 'input-color');
+		&:focus:not(.disabled) {
 			color: map-get($value, 'bg');
 			color: map-get($value, 'input-color');
 		}
@@ -365,4 +369,11 @@ input:checked + .checkbox-rate {
 
 .text_field-light {
 	background-color: $light-color;
+	&.text_field-outline {
+		border-color: $primary-color;
+	}
+	&:focus:not(.disabled) {
+		border-color: $primary-color;
+		@include shadow(0 0 0 0.25rem rgba($color: $primary-color, $alpha: 0.15));
+	}
 }

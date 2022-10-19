@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trellus</title>
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body id="wrapper">
+    <div class="group group_spacing-none h-min-height-full section_hide-header">
+        <header class="header_light header--auto">
+            <div class="group group_inline group_align-center group_spacing-xs">
+               <div class="h-width-100">
+                    <a href="./progress-and-badges.html">
+                        <img src="images/trellus-logo.svg" alt="trellus-logo.png" width="120">
+                    </a>
+                </div>
+                <div class="group group_inline group_align-center group_spacing-xs group_spacing-sm--sm">
+                    <div class="group group_inline group_spacing-sm--md  group_align-center">
+                        <a href="./search-resources.html" class="material-icons btn_link-primary icon_md h-show--sm h-hide">
+                            search
+                        </a>
+                        <a href="" class="material-icons btn_link-primary icon_md h-show--sm h-hide">
+                            settings
+                        </a>
+                        <a href="" class="material-icons-outlined btn_link-primary icon_lg" data-badge="2">
+                            notifications
+                        </a>
+                    </div>
+                    <a href="./profile.html" class="title_letter_profile-success title_letter_profile-lg" style="background-image: url('images/andres@2x.png');">
+                        Andres
+                    </a>
+                </div>
+            </div>
+        </header>
+    
+        <section class="section section_pad-xs section_lighter-primary flex_grow-1 section_body group">
+            <div class="wrap-container group h-show--md">
+                <div class="group group_spacing-sm flex_grow-none">
+                    <div class="header_title">
+                        <div class="group group_inline group_spacing-sm group_content-between">
+                            <div class="h-width-100 group group_inline group_align-center group_spacing-xs">
+                                <a href="./search-communities.html" class="btn_link-gray material-icons icon_lg">
+                                    chevron_left
+                                </a>
+                                <h2 class="title_xs-1 title_spacing-none title_dark">
+                                    Notifications
+                                </h2>
+                            </div>
+                            <div class="flex_width-auto">
+                                <a href="" class="material-icons icon_md">
+                                    more_horiz
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="title_xs-1 title_dark h-spacing-top-lg h-spacing-top-none--md">
+                        <span class="text_primary text_spacing-none">Trellus LMS:</span> Map Notifications to Module(s)
+                    </h2>
+                    <div class="h-spacing-bottom-lg h-spacing-bottom-none--md">
+                        <input type="text" class="form-control text_field-search text_field-light text_field-outline text_field-oval h-inner-spacing-vertical-md--lg" id="search" placeholder="Search...">
+                    </div>
+                    <div class="box_light box--web">
+                        
+                        <div class="box_sm h-hide h-show-block--md">
+                            <div class="group group_inline group_align-end group_spacing-xs">
+                                <div class="group group_inline h-width-100 group_spacing-none">
+                                    <div class="h-width-100">
+                                        <p class="text text_md text_spacing-none text_primary text_weight-bold">
+                                            TEP Notifications
+                                        </p>
+                                    </div>
+                                    <div class="h-width-100">
+                                        <p class="text text_md text_spacing-none text_primary text_weight-bold">
+                                            Module(s)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="h-min-width-xxs">
+                                    <div class="group group_inline group_spacing-none">
+                                        <div class="h-width-100">
+                                            <p class="text text_sm text_spacing-none text_primary text_weight-bold">
+                                                Send
+                                                <br>
+                                                Email
+                                            </p>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <p class="text text_sm text_spacing-none text_primary text_weight-bold">
+                                                Send
+                                                <br>
+                                                SMS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group group_spacing-md group_spacing-none--md h-spacing-bottom-lg">
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberVaccinationCovidNo" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="FOR YOUR INFORMATION ONLY AND IF QUESTIONS REFER USER TO IBD VACCINE REFERENCE GUIDE. Your patient has indicated no to receiving the COVID-19 vaccine. As a reference for you, we've created an {0}. Your patient has has been encouraged to review the Guide and connect with their GI provider to review these recommendations." title="FOR YOUR INFORMATION ONLY AND IF QUESTIONS REFER USER TO IBD VACCINE REFERENCE GUIDE. Your patient has indicated no to receiving the COVID-19 vaccine. As a reference for you, we've created an {0}. Your patient has has been encouraged to review the Guide and connect with their GI provider to review these recommendations." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberLabResult" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." title="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberLabResult" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." title="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberLabResult" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." title="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberLabResult" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." title="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box_sm-theme_background-fluid-white">
+                                <div class="group group_inline--md group_spacing-sm group_spacing-xl--lg">
+                                    <div class="group group_inline--md group_spacing-sm h-width-100">
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    TEP Notifications
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="TriadMemberLabResult" title="TriadMemberLabResult" readonly>
+                                            </label>
+                                        </div>
+                                        <div class="h-width-100">
+                                            <label class="group group_spacing-xs">
+                                                <span class="text_sm text_weight-bold text_primary text_spacing-none h-hide--md">
+                                                    Modules
+                                                </span>
+                                                <input type="text" class="text_field-light text_field-outline text_field-block truncate-text" value="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." title="Your patient {0} has been flagged because of their lab results. Click {1} to view more details." readonly>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="group group_inline text_align-center flex_width-auto group_spacing-xs group_align-center">
+                                        <div class="group group_inline text_align-center flex_width-auto group_spacing-xs">
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send Email
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <label class="">
+                                                    <input type="checkbox" class="checkbox">
+                                                    <span class="text_sm h-hide--md">
+                                                        Send SM
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="h-width-100 text_align-right text_align-center--md">
+                                            <a href="" class="material-icons btn_link-danger icon_md">
+                                                cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a href="" class=" btn_circle-sm btn_primary">
+                            <span class="btn_circle__icon material-icons">
+                                add
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section_pad-xxs footer_body h-hide h-show-block--sm">
+            <div class="">
+                <div class="group group_inline group_spacing-md group_content-between group_align-initial">
+                    <div class="group group_inline">
+                        <div class="h-width-100 group group_inline group_spacing-lg">
+                            <div class="flex_width-auto">
+                                <h3 class="title_xs title_align-left">
+                                    Contact us
+                                </h3>
+                                <p class="group group_spacing-xs text_spacing-none text_sm-1 title_align-left group_wrap group_content-start">
+                                    <a href="mailto:support@trellushealth.com" class="btn_link-gray">
+                                        <span class="material-icons h-spacing-right-sm">
+                                            email
+                                        </span>
+                                        support@trellushealth.com
+                                    </a>
+                                    <a href="tel:18008664165" class="btn_link-gray">
+                                        <span class="material-icons h-spacing-right-sm">
+                                            call
+                                        </span>
+                                        1-800-866-4165
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="flex_width-auto">
+                                <h3 class="title_xs title_align-left">
+                                    Social Media
+                                </h3>
+                                <p class="group group_inline group_spacing-none text_spacing-none">
+                                    <a href="mailto:support@trellushealth.com" class="btn_link-dark">
+                                        <img src="images/facebook-logo.svg" alt="facebook-logo" width="30">
+                                    </a>
+                                    <a href="tel:18008664165" class="btn_link-gray">
+                                        <img src="images/twitter-logo.svg" alt="twitter-logo" width="30">
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text_align-center">
+                            <a href="./progress-and-badges.html" class="h-spacing-bottom-md">
+                                <img src="images/trellus-logo.svg" alt="trellus-logo.png" width="100">
+                            </a>
+                            <p class="text_gray text_sm-1 text_weight-bold box_xs box_highlight-primary text_align-center">
+                                Trellus Health Inc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer_app footer_app-fixed h-hide--sm">
+            <div class="group group_inline group_content-between">
+                <a href="" class="material-icons btn_link-gray btn_link-hover-primary icon_lg">
+                    home 
+                </a>
+                <a href="" class="material-icons btn_link-gray btn_link-hover-primary icon_lg">
+                    search
+                </a>
+                <a href="./search-communities.html" class="material-icons btn_link-gray btn_link-hover-primary icon_lg" data-badge="2">
+                    chat_bubble_outline
+                </a>
+                <a href="" class="material-icons btn_link-gray btn_link-hover-primary icon_lg">
+                    settings
+                </a>
+            </div>
+        </footer>
+
+        <div class="h-hide h-show--sm">
+            <a href="./search-communities.html" class="material-icons btn_light btn_circle btn_hover-secondary btn_fixed-bottom-right text_secondary" data-badge="2">
+                chat_bubble_outline
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- layout -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/layout.js"></script>
+    
+    <!-- slider -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            freeMode: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            grabCursor: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: "auto",
+                    spaceBetween: 10,
+                },
+            }
+        });
+
+    </script>
+
+
+</body>
+</html>

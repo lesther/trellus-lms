@@ -79,3 +79,32 @@
 		background: transparent;
 	}
 }
+
+.box_sm-theme_background-fluid {
+	@extend .box_sm;
+	@extend .box_lighter-primary;
+	@include transition(0.3s);
+	&:hover {
+		border-color: rgba($color: $primary-color, $alpha: 1);
+		@include shadow(0 0 0 0.25rem rgba($color: $primary-color, $alpha: 0.15));
+	}
+	@include md {
+		@include corner(5px);
+		&:hover {
+			background-color: rgba($color: $primary-color, $alpha: 0.05);
+			border-color: transparent;
+			@include shadow(none);
+		}
+	}
+}
+.box_sm-theme_background-fluid-white {
+	@extend .box_sm-theme_background-fluid;
+	@include md {
+		@include corner(5px);
+		border-bottom: 1px solid rgba($color: $primary-color, $alpha: 0.4);
+		background-color: transparent;
+		&:hover {
+			border-bottom: 1px solid rgba($color: $primary-color, $alpha: 0.4);
+		}
+	}
+}
