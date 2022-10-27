@@ -1,0 +1,24 @@
+.flip{
+    perspective: 1200px;
+   
+    .flip__content{
+        display: grid;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+
+    .flip__back,.flip__front{
+       grid-column: 1;
+       grid-row: 1;
+       backface-visibility: hidden;
+       height: 100%;
+    }
+
+    .flip__back{
+        transform: rotateY(180deg);
+    }
+
+    &:hover .flip__content{
+        transform: rotateY(180deg);
+    }
+}
