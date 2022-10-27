@@ -8788,10 +8788,6 @@ td:before {
   border-color: #ffd900;
 }
 
-.tile_flip {
-  position: relative;
-}
-
 .panel {
   position: relative;
   z-index: 99;
