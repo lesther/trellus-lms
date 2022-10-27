@@ -1,0 +1,31 @@
+.flip {
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+}
+.flip .flip__content {
+  display: -ms-grid;
+  display: grid;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.flip .flip__back, .flip .flip__front {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100%;
+}
+.flip .flip__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flip:hover .flip__content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
