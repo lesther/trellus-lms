@@ -5,6 +5,12 @@
         display: grid;
         transform-style: preserve-3d;
         transition: transform 1s;
+        @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));
+        background-color: transparent;
+    }
+
+    .flip__content_rounded-sm{
+        @include corner(10px);
     }
 
     .flip__back,.flip__front{

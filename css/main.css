@@ -10213,6 +10213,13 @@ td:before {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  -webkit-box-shadow: 0 0 10px 0 rgba(82, 82, 82, 0.15);
+  box-shadow: 0 0 10px 0 rgba(82, 82, 82, 0.15);
+  background-color: transparent;
+}
+.flip .flip__content_rounded-sm {
+  border-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .flip .flip__back, .flip .flip__front {
   -ms-grid-column: 1;
