@@ -130,6 +130,10 @@
 		color: map-get($value, 'color');
 	}
     .tile_outline-#{$colorClass} {
-		border-color: map-get($value, 'bg');;
+		border-color: map-get($value, 'bg');
 	}
+}
+
+.tile_flip {
+    position: relative;
 }
