@@ -4,7 +4,7 @@
     .flip__content{
         display: grid;
         transform-style: preserve-3d;
-        transition: transform 1s;
+        @include transition(0.5s);
     }
 
     .flip__back,.flip__front{
@@ -18,7 +18,7 @@
         transform: rotateY(180deg);
     }
 
-    &:hover .flip__content{
+    &.active .flip__content{
         transform: rotateY(180deg);
     }
 }
