@@ -1,0 +1,31 @@
+.search{
+    position: relative;
+   
+    &__input{
+        border-radius: 0;
+        height: 47px;
+    }
+
+    &__result{
+        display: block;
+        padding-left: 20px;
+
+        &:hover{
+            background-color: $lighter-color;
+        }
+    }
+
+    &__results{
+        position: absolute;
+        top: 47px;
+        left: 0;
+        width: 100%;
+        @include shadow(0 0 3rem 0 rgba($color: $dark-color, $alpha: 0.15));
+        transform: scale(0);
+        background-color: $light-color;
+    }
+
+    &__results_active{
+        transform: scale(1);
+    }
+}
