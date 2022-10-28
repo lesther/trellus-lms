@@ -28,3 +28,24 @@
         transform: rotateY(180deg);
     }
 }
+
+// background
+.flip__back,
+.flip__front {
+    color: $light-color;
+}
+.flip__back {
+    background-color: $secondary-color;
+}
+.flip_background-format:nth-child(4n+1) .flip__front {
+    background-color: $primary-color;
+}
+.flip_background-format:nth-child(4n+2) .flip__front {
+    background-color: $secondary-color;
+}
+.flip_background-format:nth-child(4n+3) .flip__front {
+    background-color: $leading-color;
+}
+.flip_background-format:nth-child(4n+4) .flip__front {
+    background-color: $disabled-color;
+}
