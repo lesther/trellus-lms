@@ -42,7 +42,7 @@
         </header>
     
         <section class="section section_pad-xs section_lighter-primary flex_grow-1 section_body group">
-            <div class="wrap-container group h-show--md">
+            <div class="wrap-container group">
                 <div class="group group_spacing-sm flex_grow-none">
                     <div class="header_title">
                         <div class="group group_inline group_spacing-sm group_content-between">
@@ -62,10 +62,29 @@
                         </div>
                     </div>
                     <div class="box_light group group_spacing-sm">
+                        <div class="group group_spacing-xs search">
+                            <!-- agregar clase active en el input para abrir modal -->
+                            <input type="text" class="form-control text_field-search text_field-primary text_field-oval h-inner-spacing-vertical-md--lg search_input" id="search" placeholder="Search" autocomplete="off">
+                            <div class="search_results">
+                                <ul class="h-inner-spacing-horizontal-none h-spacing-none">
+                                    <li>
+                                        <a href="#" class="search_items h-inner-spacing-vertical-sm">Result 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="search_items h-inner-spacing-vertical-sm">Result 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="search_items h-inner-spacing-vertical-sm">Result 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="divider">
+                        </div>
                         <div class="grid grid_sm--sm grid_wrap grid_spacing-xs-1">
                             <div>
                                 <!-- agregar active a la clase flip -->
-                                <div class="flip">                
+                                <div class="flip">
                                     <div class="flip__content">
                                         <!-- front -->
                                         <div class="tile_primary tile_rounded-sm flip__front">
