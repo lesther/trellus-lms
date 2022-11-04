@@ -183,6 +183,12 @@
     }
 }
 
+// header_divider
+.header_divider {
+    border-bottom: 1px solid $split-color;
+}
+
+
 // bg oval
 .bg_oval-secondary-soft {
     position: relative;
@@ -212,4 +218,19 @@
     @include md {
         overflow: hidden;
     }
+}
+
+//notification
+.notification_warning {
+    background-color: rgba($color: $leading-color, $alpha: 0.05);
+    border-color: rgba($color: $leading-color, $alpha: 0.5);
+    @include shadow(0 0 0 0.25rem rgba($color: $leading-color, $alpha: 0.15));
+    &.box_light {
+        background-color: $light-color;
+    }
+}
+
+.notification_primary {
+    border-color: rgba($color: $primary-color, $alpha: 1);
+    @include shadow(0 0 0 0.25rem rgba($color: $primary-color, $alpha: 0.15));
 }

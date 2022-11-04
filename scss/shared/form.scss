@@ -25,7 +25,6 @@
 }
 .text_field-outline {
 	@extend .text_field;
-    border-color: inherit;
 }
 .text_field-block {
     width: 100%;
@@ -256,7 +255,27 @@ input:checked + .checkbox-rate {
 		z-index: -1;
 	}
 }
-
+.btn_checkbox {
+	input {
+		@include opacity(0);
+		position: absolute;
+		z-index: -1;
+		visibility: hidden;
+	}
+	input + * {
+		padding: 5px 10px;
+		@include corner(10rem);
+		border: 1px solid transparent;
+		display: inline-flex;
+		width: auto;
+		@include transition(0.3s);
+		cursor: pointer;
+	}
+}
+.btn_checkbox  input:checked + * {
+	border-color: $primary-color;
+	background-color: rgba($color: $primary-color, $alpha: 0.15);
+}
 // btn dropdown
 .btn_dropdown-circle-horizontal,
 .btn_dropdown-circle {
@@ -330,10 +349,114 @@ input:checked + .checkbox-rate {
 	max-height: 8rem;
 }
 
+// simple dropdown
+.btn_dropdown {
+	position: relative;
+}
+.btn_dropdown-menu {
+	@include position(absolute, 0, null, null, 0, null, null);
+	padding-top: 0px;
+	z-index: 1;
+	@include transition(0.3s);
+	@include opacity(0);
+	visibility: hidden;
+}
+.btn_dropdown-item  {
+	padding: 10px;
+	@include corner(10px);
+	@extend .group;
+	border: 1px solid $split-color;
+	min-width: 200px;
+	background-color: $light-color;
+}
+.btn_dropdown-toggle {
+	cursor: pointer;
+}
+.btn_dropdown:hover {
+	.btn_dropdown-menu {
+		padding-top: 25px;
+		@include opacity(100);
+		visibility: visible;
+	}
+	.btn_dropdown-toggle {
+		color: $primary-color;
+	}
+}
+
+
+// switch
+.btn_switch-input {
+	position: absolute;
+	z-index: -1;
+	@include opacity(0);
+	visibility: hidden;
+	&:not([disabled]):not(.disabled) ~ *,
+	&:not([disabled]):not(.disabled) + .btn_switch {
+		cursor: pointer;
+		@include transition(0.3s);
+	}
+}
+.btn_switch {
+	position: relative;
+}
+.btn_switch:before {
+	content: "";
+	display: block;
+	@include position(relative, null, null, null, null, 32px, 17px);
+	@include transition(0.3s);
+	@include corner(10rem);
+	position: relative;
+	background-color: rgba($color:  $primary-color, $alpha: 0.4);
+	border: 2px solid rgba($color: $primary-color, $alpha: 0.5);
+}
+.btn_switch:after {
+	content: "";
+	@include position(absolute, 2px, null, 2px, auto, 13px, 13px);
+	display: block;
+	@include corner(100%);
+	background-color: $light-color;
+	@include transition(0.1s);
+	z-index: 1;
+}
+
+.btn_switch-input:checked {
+	+ .btn_switch:before {
+		background-color: rgba($color:  $primary-color, $alpha: 1);
+	}
+	+ .btn_switch:after {
+		left: calc(100% - 15px);
+	}
+	~ * {
+		color: $primary-color;
+	}
+}
+
 /////////////////////////////
 // color
 //format
 @each $colorClass, $value in $mixClass-palette {
+	.btn_switch-#{$colorClass} {
+		@extend .btn_switch;
+		&:before {
+			background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
+			border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.5);
+		}
+	}
+	.btn_switch-input:checked {
+		+ .btn_switch-#{$colorClass}:before {
+			background-color: rgba($color: map-get($value, 'bg'), $alpha: 1);
+			border-color: map-get($value, 'bg'); 
+		}
+		+ .btn_switch-#{$colorClass} ~ * {
+			color: map-get($value, 'bg');
+		}
+	}
+	.text_field-outline-#{$colorClass} {
+		@extend .text_field-outline;
+		color: map-get($value, 'dark');
+		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.7);
+		background-color: initial;
+	}
 	.text_field-#{$colorClass}[type="date"], 
 	.text_field-#{$colorClass} {
 		@extend .text_field;
