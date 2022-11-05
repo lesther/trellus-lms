@@ -224,6 +224,7 @@
 	font-family: $font-family-primary;
 	text-align: center;
 	font-weight: bold;
+	z-index: 1;
 }
 // color
 .data-badge--warning-outline[data-badge]:after,
