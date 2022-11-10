@@ -196,7 +196,6 @@
 		&::first-letter {
 			font-size: 1.3rem;
 			line-height: 48px;
-			font-weight: bold;
 		}
 	}
 }
@@ -207,6 +206,13 @@
 	&::first-letter {
 		font-size: 2rem;
 		line-height: 60px;
+	}
+	span:first-child,
+	span:nth-child(2) {
+		&::first-letter {
+			font-size: 1.3rem;
+			line-height: 60px;
+		}
 	}
 }
 
@@ -219,6 +225,13 @@
 			font-size: 1.5rem;
 			line-height: 50px;
 		}
+		span:first-child,
+		span:nth-child(2) {
+			&::first-letter {
+				font-size: 1.3rem;
+				line-height: 50px;
+			}
+		}
 	}
 	@include md {
 		width: 60px;
@@ -226,6 +239,13 @@
 		&::first-letter {
 			font-size: 2rem;
 			line-height: 60px;
+		}
+		span:first-child,
+		span:nth-child(2) {
+			&::first-letter {
+				font-size: 1.3rem;
+				line-height: 60px;
+			}
 		}
 	}
 }
