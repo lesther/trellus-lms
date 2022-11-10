@@ -43,6 +43,10 @@
     position: relative;
     @include background(cover, center, no-repeat);
 }
+.tile__header-image-contain {
+    position: relative;
+    @include background(contain, center, no-repeat);
+}
 .tile__header-corner-sm {
     @include corner(10px);
 }
