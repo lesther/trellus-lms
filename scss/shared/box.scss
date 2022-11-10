@@ -126,3 +126,41 @@
 		}
 	}
 }
+
+
+//error/success
+.box_info-error {
+	border-color: $danger-color;
+	@include shadow(0 0 0 0.25rem rgba($color: $danger-color, $alpha: 0.15));
+}
+.box_info-success {
+	border-color: $success-color;
+	@include shadow(0 0 0 0.25rem rgba($color: $success-color, $alpha: 0.15));
+}
+
+.box_modal {
+	@include position(fixed, 0, 0, 0, 0, 100%, 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
+	padding: 25px;
+}
+.box_modal_content {
+	@extend .box;
+	border: 1px solid $gray-border-color;
+	background-color: $light-color;
+	max-width: 500px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+.box_modal_content-danger {
+	border-color: $danger-color;
+	background-color: #fcf3f5;
+}
+.box_modal-overlay {
+	@include position(fixed, 0, 0, 0, 0, 100%, 100%);
+	background-color: rgba($color: $light-color, $alpha: 0.75);
+}

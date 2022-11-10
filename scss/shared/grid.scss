@@ -8,6 +8,10 @@
     flex-wrap: wrap;
 }
 
+.grid_half {
+	grid-template-columns: 1fr 1fr;
+}
+
 @mixin grid-modifiers($size: "") {
     .grid_sm#{$size} {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
