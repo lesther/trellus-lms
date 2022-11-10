@@ -242,6 +242,9 @@
 .title_letter_profile[style*="background-image"],
 .title_letter_profile[style*="background-image"]:hover,
 .title_letter_profile[style*="background-image"]:first-letter,
+.title_letter_profile[data-gender="person"],
+.title_letter_profile[data-gender="person"]:hover,
+.title_letter_profile[data-gender="person"]:first-letter,
 .title_letter_profile[data-gender="male"],
 .title_letter_profile[data-gender="male"]:hover,
 .title_letter_profile[data-gender="male"]:first-letter,
@@ -257,6 +260,9 @@
 }
 [data-gender="male"] {
 	background-image: url(../images/boy-placeholder.svg);
+}
+[data-gender="person"] {
+	background-image: url(../images/person-placeholder.svg);
 }
 
 /////////////////////////////
