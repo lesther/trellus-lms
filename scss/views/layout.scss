@@ -55,6 +55,10 @@
 
 // wrap body
 .section_body {
+    @include only-mobile {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
     @include md {
         margin: auto;
         width: calc(100% - 80px);
