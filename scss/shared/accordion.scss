@@ -72,13 +72,13 @@
 .box_collapse {
     @include transition(0.3s);
     @include corner(10px);
-    border: 1px solid $leading-color;
+    border: 1px solid #861C44;
     overflow: hidden;
 }
 .box_collapse__header {
     padding: 10px 15px;
-    background-color: rgba($color: $leading-color, $alpha: 0.05);
-    color: $leading-color;
+    background-color: #F9F4F6;
+    color: #861C44;
     @include transition(0.3s);
     display: block;
     text-align: center;
@@ -91,16 +91,17 @@
 }
 .box_collapse__content-wrap {
     padding: 20px;
-    background-color: rgba($color: $primary-color, $alpha: 0.1);
+    background-color: #F0F7F5;
+    color: #1C1817;
 }
 //active
 .box_collapse:hover.visited,
 .box_collapse:hover,
 .box_collapse.active.visited,
 .box_collapse.active {
-    border-color: $primary-color;
+    border-color: #76B29C;
     .box_collapse__header {
-        background-color: $primary-color;
+        background-color: #76B29C;
         color: $light-color;
     }
 }
