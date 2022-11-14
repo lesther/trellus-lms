@@ -90,10 +90,16 @@
 // videos
 .wrap-video {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 140.25%; /* 16:9 */
   height: 0;
   overflow: initial;
   margin-bottom: 50px;
+  @include xs {
+    padding-bottom: 90.25%; /* 16:9 */
+  }
+  @include sm {
+    padding-bottom: 56.25%; /* 16:9 */
+  }
   @include md {
     margin-bottom: 0;
   }
