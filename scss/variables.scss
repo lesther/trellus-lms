@@ -105,3 +105,25 @@ $chartPie-palette: (
 	"lighter": ( start-color: $lighter-color, end-color: $gray-color, fill-color: rgba($color: $light-color, $alpha: 0.1) )
 ) !default;
 
+// title profile
+$title_letter_profile-palette: (
+	"light": ( bg: $light-color, color: inherit, input-color: inherit ),
+	"light-2": ( bg: $light-color, input-color: inherit, color: inherit ),
+	"lighter": ( bg: $lighter-color, color: inherit ),
+	"lighter-2": ( bg: $lighter-color, input-color: inherit, color: inherit ),
+	"lighter-primary": ( bg: $lighter-color--primary, color: inherit ),
+	"gray": ( bg: $gray-color, color: inherit ),
+	"leading-light": ( bg: $leading-color--light, color: inherit ),
+	"primary-accent": ( bg: $primary-color--accent, color: $light-color ),
+	"secondary-accent": ( bg: $secondary-color--accent, color: $light-color ),
+	"success": ( bg: $success-color, color: $light-color ),
+	"danger": ( bg: $danger-color, color: $light-color ),
+	"disabled": ( bg: $disabled-color, color: $light-color ),
+	"warning": ( bg: $warning-color, color: $light-color ),
+	//changes
+	"dark": ( bg: #525252, color: $light-color ),
+	"green-dark": ( bg: #51685b, color: $light-color ),
+	"leading": ( bg: #9e2358, color: $light-color ),
+	"primary": ( bg: #63b49b, color: $light-color ),
+	"secondary": ( bg: #f1be4e, color: #525252 ),
+) !default;

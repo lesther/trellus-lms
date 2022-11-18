@@ -35,12 +35,14 @@
     border: 1px solid transparent;
 }
 .flip__front {
-    background-color: #76B29C;
-    border-color: #76B29C;
+    background-color: #f1be4e;
+    border-color: #f4d49d;
+    color: #525252;
 }
 .flip__back {
-    background-color: #E9C062;
-    border-color: #E9C062;
+    background-color: #f4d49d;
+    border-color: #f1be4e;
+    color: #525252;
 }
 .flip_background .flip:nth-child(4n+1) .flip__front {
     background-color: $primary-color;

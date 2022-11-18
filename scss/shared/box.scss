@@ -157,10 +157,28 @@
 	z-index: 1;
 }
 .box_modal_content-danger {
-	border-color: $danger-color;
-	background-color: #fcf3f5;
+	border-color: #9f2258;
+	background-color: #f4e6ed;
+	color: #9f2258;
+	.btn_danger {
+		background: #9f2258;
+	}
 }
 .box_modal-overlay {
 	@include position(fixed, 0, 0, 0, 0, 100%, 100%);
 	background-color: rgba($color: $light-color, $alpha: 0.75);
+}
+
+//cosmetic fixes
+.box_info-success.matching-titles {
+	background-color: #7c9b89;
+	border-color: #51685b;
+	color: #fff;
+	@include shadow(0 0 0 0.25rem rgba($color: #51685b, $alpha: 0));
+}
+.box_info-error.matching-titles {
+	background-color: $leading-color;
+	border-color: $leading-color;
+	color: #fff;
+	@include shadow(0 0 0 0.25rem rgba($color: #51685b, $alpha: 0));
 }

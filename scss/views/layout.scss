@@ -241,12 +241,17 @@
 
 // matching titles
 .matching-titles {
+    border: 1px solid #a8a8a8;
     height: 120px;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    @include corner(10px);
+    @include transition(0.3s);
     @include sm {
-        height: 100px;
-    }
-    @include md {
-        height: 70px;
+        height: 120px;
     }
 }
