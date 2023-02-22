@@ -496,6 +496,9 @@
 	}
 
 	// min-height
+	.h-min-height-none#{$size} {
+		min-height: 0;
+	}
 	.h-min-height-full#{$size} {
 		min-height: 100vh;
 	}
