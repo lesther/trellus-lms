@@ -47,6 +47,18 @@
     position: relative;
     @include background(contain, center, no-repeat);
 }
+.tile__header-image_img {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center
+}
+.tile__header-image_img-item {
+    @include position(absolute, 0, 0, 0, 0, null, null);
+    margin: auto;
+}
 .tile__header-corner-sm {
     @include corner(10px);
 }
