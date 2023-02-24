@@ -1,18 +1,24 @@
 /////////////////////////////
 // images
 .full-image {
-	@include background(cover, center, no-repeat);
+	@include background(contain, bottom, no-repeat);
 }
 .full-image_backward {
-	@include background(cover, center, no-repeat);
+	@include background(contain, bottom, no-repeat);
 	@include position(absolute, 0, null, 0, null, 100%, 100%);
 }
 .full-image_backward-contain {
-	@include background(contain, center, no-repeat);
+	@include background(contain, bottom, no-repeat);
 	@include position(absolute, 0, null, 0, null, 100%, 100%);
 }
+.full-image--center {
+	background-position: center;
+}
+.full-image--cover {
+	@include background(cover, null, null);
+}
 .full-image_height-auto {
-	@include background(auto 100%, center, no-repeat);
+	@include background(auto 100%, bottom, no-repeat);
 }
 .full-image_overlay {
 	position: relative;
