@@ -39,6 +39,11 @@
 		@content;
 	}
 }
+@mixin specific($breakpointValue) {
+	@media (min-width: #{$breakpointValue}) {
+		@content;
+	}
+}
 //specific
 @mixin only-mobile {
 	@media (max-width: #{$screen-md}) {

@@ -97,6 +97,21 @@
             margin-top: auto;
         }
     }
+    @include specific(420px) {
+        .tile__header-image {
+            min-height: 130px;
+        }   
+    }
+    @include md {
+        .tile__header-image {
+            min-height: 150px;
+        }   
+    }
+    @include lg {
+        .tile__header-image {
+            min-height: 200px;
+        }   
+    }
 }
 
 // box
