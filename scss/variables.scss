@@ -85,6 +85,7 @@ $buttons-palette: (
   "leading": ( bg: $leading-color, hover: $secondary-color, color: $light-color ),
   "primary": ( bg: $primary-color, hover: $secondary-color, color: $light-color ),
   "secondary": ( bg: $secondary-color, hover: $secondary-color--accent, color: $light-color ),
+  "secondary-2": ( bg: $secondary-color, hover: $secondary-color--accent, color: $dark-color ),
   "success": ( bg: $success-color, hover: $success-color--accent, color: $light-color ),
   "danger": ( bg: $danger-color, hover: $danger-color--accent, color: $light-color ),
   "warning": ( bg: $warning-color, hover: $warning-color--accent, color: $light-color )

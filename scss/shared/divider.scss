@@ -18,7 +18,6 @@
 	}
 }
 
-// Generate
 @include divider-atr();
 @include sm {
 	@include divider-atr("--sm");
@@ -34,7 +33,7 @@
 }
 
 /////////////////////////////
-//format
+//format colors
 @each $colorClass, $value in $colorClass-palette {
 	.divider_#{$colorClass} {
         @extend .divider;
@@ -52,4 +51,9 @@
         @extend .divider_vertical;
         background-color: rgba($color: $value, $alpha: 0.4);
 	}
+}
+
+//size
+.split {
+    height: 6px;
 }
